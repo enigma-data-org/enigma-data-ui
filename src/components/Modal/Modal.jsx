@@ -28,8 +28,8 @@ export const Modal = (props) => {
     }
   }
 
-  function handleButtonClick() {
-    isAccepted(true);
+  function handleButtonClick(acceptedStatus) {
+    isAccepted(acceptedStatus);
   }
 
   if (!modalData) {
@@ -43,8 +43,8 @@ export const Modal = (props) => {
       <h3>{modalData.modal_sub_header}</h3>
       <p className="modal-description">{modalData.modal_description}</p>
       <div className="modal-button-container">
-        <button onClick={handleButtonClick}>No Thanks</button>
-        <button onClick={handleButtonClick}>Let's Go!</button>
+        <button onClick={() => handleButtonClick(false)}>No Thanks</button>
+        <button onClick={() => handleButtonClick(true)}>Let's Go!</button>
       </div>
     </div>
   );
