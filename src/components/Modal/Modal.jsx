@@ -38,7 +38,9 @@ export const Modal = (props) => {
 
   return (
     <div className="modal-container">
-      <img src={modalData.company_img} alt="logo" />
+      <div className="modal-image-container">
+        <img className="modal-image" src={modalData.company_img} alt="logo" />
+      </div>
       <h1>{modalData.modal_header}</h1>
       <h3>{modalData.modal_sub_header}</h3>
       <p className="modal-description">{modalData.modal_description}</p>
