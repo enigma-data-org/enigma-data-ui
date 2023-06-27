@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Modal.css";
 
 export const Modal = (props) => {
-  const { isAccepted, company } = props;
+  const { isAccepted, company = "IHOP" } = props;
   const [modalData, setModalData] = useState(null);
 
   useEffect(() => {
@@ -45,8 +45,26 @@ export const Modal = (props) => {
       <h3>{modalData.modal_sub_header}</h3>
       <p className="modal-description">{modalData.modal_description}</p>
       <div className="modal-button-container">
-        <button onClick={() => handleButtonClick(false)}>No Thanks</button>
-        <button onClick={() => handleButtonClick(true)}>Let's Go!</button>
+        <button
+          className="modal-buttons"
+          style={{
+            backgroundColor: `#${modalData?.primary_color}`,
+            color: "white",
+          }}
+          onClick={() => handleButtonClick(false)}
+        >
+          No Thanks
+        </button>
+        <button
+          className="modal-buttons"
+          style={{
+            backgroundColor: `#${modalData?.primary_color}`,
+            color: "white",
+          }}
+          onClick={() => handleButtonClick(true)}
+        >
+          Let's Go!
+        </button>
       </div>
     </div>
   );
