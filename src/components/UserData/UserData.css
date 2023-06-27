@@ -1,0 +1,56 @@
+.user-data-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 50px 0px;
+  gap: 100px;
+  border: 1px solid #e5e5e5;
+  border-radius: 9px;
+  min-width: 600px;
+  max-width: 700px;
+  background-color: #faf9f6;
+}
+
+.user-data-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.user-data-form-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-data-input {
+  padding: 5px 2px;
+}
+
+.user-data-right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-data-right-content-container {
+  height: 295px;
+}
+
+.picklist-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+#user-data-save-button {
+  border: none;
+  padding: 8px 24px;
+  border-radius: 4px;
+  color: white;
+}
+
+#user-data-save-button:hover {
+  cursor: pointer;
+}
