@@ -3,20 +3,19 @@ import "./UserData.css";
 import axios from "axios";
 
 export const UserData = (props) => {
-  const { company = "IHOP" } = props;
+  const { company } = props;
   const [data, setData] = useState(null);
 
   async function getData() {
     try {
       let resp = await axios.get(
-        "http://localhost:3000/get-enigma-modal-data",
+        "https://enigma-data-server-production.up.railway.app/get-enigma-modal-data",
         {
           params: {
             company: company,
           },
         }
       );
-      console.log("resp.data", resp.data);
       setData(resp.data);
     } catch (error) {
       console.log("Error from Enigma Data:", error);

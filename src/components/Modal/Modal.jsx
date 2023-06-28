@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Modal.css";
 
 export const Modal = (props) => {
-  const { isAccepted, company = "IHOP" } = props;
+  const { isAccepted, company } = props;
   const [modalData, setModalData] = useState(null);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export const Modal = (props) => {
   async function getModalData() {
     try {
       let resp = await axios.get(
-        "http://localhost:3000/get-enigma-modal-data",
+        "https://enigma-data-server-production.up.railway.app/get-enigma-modal-data",
         {
           params: {
             company: company,
