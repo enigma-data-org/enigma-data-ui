@@ -4,7 +4,7 @@ import axios from "axios";
 import Logo from "../../assets/enigma-logo.svg";
 
 export const UserData = (props) => {
-  const { company = "IHOP" } = props;
+  const { company } = props;
   const [data, setData] = useState(null);
 
   async function getData() {

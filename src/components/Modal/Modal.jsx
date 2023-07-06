@@ -4,7 +4,7 @@ import Logo from "../../assets/enigma-logo.svg";
 import "./Modal.css";
 
 export const Modal = (props) => {
-  const { isAccepted, company = "IHOP" } = props;
+  const { isAccepted, company } = props;
   const [modalData, setModalData] = useState(null);
 
   useEffect(() => {
