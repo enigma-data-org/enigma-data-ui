@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Logo from "../../assets/enigma-logo.svg";
 import "./Modal.css";
 
 export const Modal = (props) => {
-  const { isAccepted, company } = props;
+  const { isAccepted, company = "IHOP" } = props;
   const [modalData, setModalData] = useState(null);
 
   useEffect(() => {
@@ -65,6 +66,16 @@ export const Modal = (props) => {
         >
           Let's Go!
         </button>
+      </div>
+      <div>
+        <img className="modal-enigma-logo" src={Logo} alt="Enigma Data Logo" />
+        <p
+          style={{
+            fontSize: "10px",
+          }}
+        >
+          Powered by Enigma Data
+        </p>
       </div>
     </div>
   );
