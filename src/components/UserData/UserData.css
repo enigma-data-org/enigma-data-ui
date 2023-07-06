@@ -1,14 +1,21 @@
-.user-data-container {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  padding: 50px 0px;
-  gap: 100px;
+.user-data-main-container {
+  padding: 25px 0px;
   border: 1px solid #e5e5e5;
   border-radius: 9px;
   min-width: 600px;
   max-width: 700px;
-  background-color: #faf9f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.user-data-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 100px;
 }
 
 .user-data-form-container {
@@ -34,14 +41,31 @@
 }
 
 .user-data-right-content-container {
-  height: 295px;
+  height: 280px;
+  display: flex;
+  margin-top: 8px;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .picklist-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.user-data-picklist-header {
+  margin: 0px;
+}
+
+.user-data-radio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: flex-start;
+  gap: 5px;
+  font-size: 14px;
 }
 
 #user-data-save-button {
@@ -53,4 +77,11 @@
 
 #user-data-save-button:hover {
   cursor: pointer;
+}
+
+.enigma-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
 }

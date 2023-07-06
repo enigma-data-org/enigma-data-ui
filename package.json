@@ -1,6 +1,6 @@
 {
   "name": "enigma-data-ui",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "An npm package created for Enigma Data",
   "main": "dist/main.js",
   "scripts": {
@@ -32,6 +32,8 @@
     "react-dom": "^18.2.0",
     "storybook": "^7.0.23",
     "style-loader": "^3.3.3",
+    "svg-inline-loader": "^0.8.2",
+    "svg-url-loader": "^8.0.0",
     "webpack": "^5.88.0",
     "webpack-cli": "^5.1.4"
   },
