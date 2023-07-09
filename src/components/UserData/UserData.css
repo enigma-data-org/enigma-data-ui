@@ -24,6 +24,10 @@
   gap: 8px;
 }
 
+.user-data-input-header {
+  font-weight: 500;
+}
+
 .user-data-form-cell {
   display: flex;
   flex-direction: column;
@@ -48,21 +52,30 @@
   gap: 20px;
 }
 
-.picklist-container {
+.picklist-master-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   gap: 40px;
+}
+
+.picklist-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .user-data-picklist-header {
   margin: 0px;
+  margin-left: 5px;
+  font-weight: 500;
 }
 
 .user-data-radio-container {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: start;
   justify-content: flex-start;
   gap: 5px;
   font-size: 14px;

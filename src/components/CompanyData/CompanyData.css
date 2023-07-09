@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.company-data-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  width: 725px;
+  gap: 50px;
+  border-radius: 6px;
+  background-color: #222324;
+  color: white;
+}
+
+.company-data-left {
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #057ac0;
+  width: 350px;
+}
+
+.company-data-left h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.company-data-left h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.company-data-left p {
+  font-size: 16px;
+  font-weight: 300;
+  width: 95%;
+}
+
+.company-data-form-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 5px;
+  padding: 10px 0px;
+}
+
+.company-data-input-header {
+  font-weight: 400;
+}
+
+.company-data-form-cell input {
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  width: 90%;
+  padding: 5px;
+}
+
+.company-data-pref-header {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.company-data-list-container {
+  padding: 0px 0px 15px 0px;
+}
+
+.company-data-category-header {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0px;
+  padding: 15px 0px;
+}
+
+.company-data-list-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+.company-data-list-header-container h5 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.company-data-radio-container {
+  padding: 3px 0px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.company-data-radio-label {
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+.company-data-right-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.company-data-enigma-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.company-data-save-button {
+  background-color: #057ac0;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.company-data-save-button:hover {
+  background-color: #228ecd;
+  cursor: pointer;
+}

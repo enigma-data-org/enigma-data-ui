@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./UserData.css";
 import axios from "axios";
 import Logo from "../../assets/enigma-logo.svg";
+import Switch from "react-switch";
 
 export const UserData = (props) => {
-  const { company } = props;
+  const { company = "IHOP" } = props;
   const [data, setData] = useState(null);
+  const [isToggled, setIsToggled] = useState({});
 
   async function getData() {
     try {
@@ -21,6 +23,12 @@ export const UserData = (props) => {
     } catch (error) {
       console.log("Error from Enigma Data:", error);
     }
+  }
+
+  function handleButtonToggle(index) {
+    setIsToggled((prev) => {
+      return { ...prev, [index]: !prev[index] };
+    });
   }
 
   useEffect(() => {
@@ -39,7 +47,9 @@ export const UserData = (props) => {
       <div className="user-data-container">
         <form className="user-data-form-container" action="POST">
           <div className="user-data-form-cell">
-            <label htmlFor="first-name">First Name</label>
+            <label className="user-data-input-header" htmlFor="first-name">
+              First Name
+            </label>
             <input
               className="user-data-input"
               type="text"
@@ -49,7 +59,9 @@ export const UserData = (props) => {
             ></input>
           </div>
           <div className="user-data-form-container">
-            <label htmlFor="last-name">Last Name</label>
+            <label className="user-data-input-header" htmlFor="last-name">
+              Last Name
+            </label>
             <input
               className="user-data-input"
               type="text"
@@ -58,7 +70,7 @@ export const UserData = (props) => {
               placeholder="Last Name"
             ></input>
           </div>
-          <div className="user-data-form-container">
+          {/* <div className="user-data-form-container">
             <label htmlFor="dob">Date of birth</label>
             <input
               className="user-data-input"
@@ -67,9 +79,11 @@ export const UserData = (props) => {
               name="dob"
               placeholder="Your name.."
             ></input>
-          </div>
+          </div> */}
           <div className="user-data-form-container">
-            <label htmlFor="name">Email</label>
+            <label className="user-data-input-header" htmlFor="name">
+              Email
+            </label>
             <input
               className="user-data-input"
               type="email"
@@ -79,7 +93,9 @@ export const UserData = (props) => {
             ></input>
           </div>
           <div className="user-data-form-container">
-            <label htmlFor="phone-number">Phone Number</label>
+            <label className="user-data-input-header" htmlFor="phone-number">
+              Phone Number
+            </label>
             <input
               className="user-data-input"
               type="tel"
@@ -93,20 +109,33 @@ export const UserData = (props) => {
           <div className="user-data-right-content-container">
             {data?.user_data_picklist?.map((preference, index) => {
               return (
-                <div key={index} className="picklist-container">
-                  <p className="user-data-picklist-header">
-                    {preference?.header}
-                  </p>
-                  <div className="user-data-radio-container">
-                    {preference?.picklist?.map((option, index) => {
-                      return (
-                        <div>
-                          <label htmlFor="radio">{option}</label>
-                          <input type="radio" value={option} />
-                        </div>
-                      );
-                    })}
+                <div className="picklist-master-container">
+                  <div key={index} className="picklist-container">
+                    {preference?.header === "Favorite iHOP Meals" ? (
+                      <h4>hey</h4>
+                    ) : (
+                      <h4>hey</h4>
+                    )}
+                    <p className="user-data-picklist-header">
+                      {preference?.header}
+                    </p>
+                    <div className="user-data-radio-container">
+                      {preference?.picklist?.map((option, index) => {
+                        return (
+                          <div>
+                            <input type="radio" value={option} />
+                            <label htmlFor="radio">{option}</label>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
+                  <Switch
+                    height={20}
+                    width={48}
+                    onChange={() => handleButtonToggle(index)}
+                    checked={isToggled[index] ? true : false}
+                  />
                 </div>
               );
             })}
