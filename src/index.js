@@ -1,2 +1,2 @@
 export * from "./components/Modal";
-export * from "./components/UserData";
+export * from "./components/CompanyData";
