@@ -15,7 +15,7 @@ or
 Import the components into your file
 
 ```jsx
-const {CompanyData, Modal} from "enigma-data-ui"
+import {CompanyData, Modal} from "enigma-data-ui"
 ```
 
 Use them in your application and pass the `company` prop like so:
