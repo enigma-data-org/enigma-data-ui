@@ -24,7 +24,7 @@ Use them in your application and pass the `company` prop like so:
 function App() {
   return (
     <div className="App">
-      <UserData company="insert-name-here" />
+      <CompanyData company="insert-name-here" />
     </div>
   );
 }
