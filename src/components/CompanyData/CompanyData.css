@@ -7,7 +7,7 @@
 .company-data-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   padding: 25px;
   width: 725px;
   gap: 50px;
